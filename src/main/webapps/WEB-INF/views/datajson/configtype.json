@@ -1,0 +1,15 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 1, 
+    "data": [
+		{
+            "config_type_id": "biz01",
+			"config_type_dname": "费用报销", 
+            "config_type_dtype": "张三", 
+            "config_type_cname": "2018-9-10", 
+            "config_type_ctype": "里斯",
+            "config_type_cdisplay": "2018-9-11"
+        }
+    ]
+}

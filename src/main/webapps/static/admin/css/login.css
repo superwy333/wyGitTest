@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: url("../images/login/login_line.jpg") left center repeat-x;
+  height: 100%;
+}
+/*移除表单填充色*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ececec inset;
+}
+/*按钮移上去颜色*/
+.layui-btn-primary:hover {
+  border-color: #1E9FFF;
+  color: #333;
+}
+/*页面背景色*/     /*修改开始*/
+.m-login-bg {
+  height: 100%;
+  width:100%;
+}
+.logobox{
+	position: absolute;
+    top: 30px;
+    left: 150px;
+    color: #f93;
+    width: 223px;
+    height: 84px;
+    background: url(../images/logo1.png) no-repeat center center transparent;
+    -webkit-animation: back-show .5s;
+    animation: back-show .5s;
+    background-size: 221px 84px;}
+.m-login {
+  padding: 20px;
+  background-color: transparent;
+  width: 368px;
+  height: 448px;
+  background-color:rgba(255,255,255,.68);
+  position:relative;
+  left: 65%;
+  top: 22%;
+  box-shadow: 0 0 13px 3px rgba(76,76,76,.5);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.m-login .lotit {
+  font-size: 1.4em;
+  color: #606c84;
+  font-weight: 700;
+  margin-bottom:20px;
+}
+.m-login .copyright {
+  text-align: center;
+  color: #999;
+  padding-top: 10px;
+}
+.m-login-warp {
+
+  
+
+}
+.m-login-warp .layui-input {
+  height: 40px;
+  line-height: 40px\9;
+		padding-bottom: 12px;
+		padding-left: 42px;
+		padding-top: 12px;
+  -webkit-transition-property: none;
+  transition-property: none;
+  background-color:#fff;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  transition:border .2s cubic-bezier(.645,.045,.355,1) 0s,background .2s cubic-bezier(.645,.045,.355,1) 0s,box-shadow .2s cubic-bezier(.645,.045,.355,1) 0s;
+}
+.m-login-warp .layui-input:hover{ border:1px solid #66afe9 !important;}
+.m-login-warp .layui-input:focus{ border:1px solid #66afe9 !important;}
+.login-inp{ margin-bottom:26px;}
+.login-inp .layui-inline{ max-width:180px; margin-right:0;}
+.login-code{ margin-right:20px !important;}
+.m-login-warp .m-login-btn .layui-inline {
+  width: 100%;
+  margin: 0;
+}
+.m-login-warp .m-login-btn .layui-inline button {
+  width: 100%;
+  background-color:#f28328;
+  border-radius: 4px;
+}
+.m-login-warp .verifyImg {
+  width: 120px;
+  height: 42px;
+}
+@media screen and (max-width: 450px) {
+  .m-login {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -240px;
+  }
+  .layui-form-item .layui-inline {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    clear: both;
+  }
+  .m-login-warp .m-login-btn .layui-inline {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}

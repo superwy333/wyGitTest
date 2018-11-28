@@ -1,0 +1,34 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 3, 
+    "data": [
+        {
+            "b_id": 1, 
+            "b_username": "图片", 
+            "b_seque": "jpg", 
+            "b_cmode": "扫描", 
+            "b_ccode": 101, 
+            "b_collector": "张三", 
+            "b_ctime": "2018-08-20"
+        },
+        {
+            "b_id": 2, 
+            "b_username": "图片", 
+            "b_seque": "jpg", 
+            "b_cmode": "扫描", 
+            "b_ccode": 101, 
+            "b_collector": "张三", 
+            "b_ctime": "2018-08-20"
+        },
+        {
+            "b_id": 3, 
+            "b_username": "图片", 
+            "b_seque": "jpg", 
+            "b_cmode": "电子数据单", 
+            "b_ccode": 101, 
+            "b_collector": "张三", 
+            "b_ctime": "2018-08-21"
+        }
+    ]
+}

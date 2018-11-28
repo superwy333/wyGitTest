@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>文件种类配置</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/myadmin.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/boxImg.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/configejct.css"/>
+	</head>
+
+	<body>
+		<div class="wrap-container">
+			<div class="">
+				<div class="alltasks col-lg-9">
+					<div class="data-show">
+						<div class="layui-tab layui-tab-card" lay-filter="tab1">
+							<ul class="layui-tab-title">
+								<li class="layui-this" lay-id="1">影像文件种类配置</li>
+								<li lay-id="2">影像数据字段配置</li>
+							</ul>
+							<div class="layui-tab-content" style="min-height: 100px;">
+								<div class="layui-tab-item  layui-show">
+									<table class="layui-hide" id="config_image_file" lay-filter="config_image_file"></table>
+								</div>
+								<script type="text/html" id="b_config_image">
+									<div class="layui-btn-container">
+										<button class="layui-btn layui-btn-sm" lay-event="submit">字段配置提交</button>
+										<button class="layui-btn layui-btn-sm" lay-event="att_submit">字段属性配置</button>
+										<button class="layui-btn layui-btn-sm" lay-event="outexcel">导出excel</button>
+										<button class="layui-btn layui-btn-sm" lay-event="inexcel">导入excel</button>
+									</div>
+								</script>
+								<script type="text/html" id="config_opera">
+                                    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="config_img_field">字段配置</a>
+                                </script>
+								<div class="layui-tab-item eject">
+									<div class="layui-card-header">表头-主数据</div>
+									<table class="layui-hide" id="config_file_hfield" lay-filter="config_file_hfield"></table>
+									<div class="layui-card-header">表身-明细数据</div>
+									<table class="layui-hide" id="config_file_field" lay-filter="config_file_field"></table>
+								</div>
+								<script type="text/html" id="config_attribute">
+                                    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="config_attribute">属性配置</a>
+                                </script>
+								<script type="text/html" id="attribute_cont">
+									<form class="layui-form">
+										<div class="config_left">
+											<div class="layui-form-item" pane="">
+												<div class="layui-input-block">
+												  <input type="checkbox" name="like1[task1]" lay-skin="primary" title="业务类型">
+												  <input type="checkbox" name="like1[task2]" lay-skin="primary" title="业务单号">
+												  <input type="checkbox" name="like1[task3]" lay-skin="primary" title="企业主体">
+												  <input type="checkbox" name="like1[task4]" lay-skin="primary" title="封单状态">
+												  <input type="checkbox" name="like1[task5]" lay-skin="primary" title="影像状态">
+												  <input type="checkbox" name="like1[task6]" lay-skin="primary" title="调阅审核">
+												  <input type="checkbox" name="like1[task7]" lay-skin="primary" title="任务创建方式">
+												  <input type="checkbox" name="like1[task8]" lay-skin="primary" title="影像采集来源">
+												  <input type="checkbox" name="like1[task9]" lay-skin="primary" title="提单人编号">
+												  <input type="checkbox" name="like1[task10]" lay-skin="primary" title="提单人">
+												  <input type="checkbox" name="like1[task11]" lay-skin="primary" title="提单时间">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												  <input type="checkbox" name="like1[task12]" lay-skin="primary" title="任务状态">
+												</div>
+											  </div>
+										</div>
+										<div class="config_right">
+											<div class="layui-inline">
+												<label class="layui-form-label">数据类型</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">输入顺序</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">默认值</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">备注</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item config_right_check">
+												<label class="layui-form-label">勾选选框</label>
+												<div class="layui-input-block field_check">
+													<input type="checkbox" name="like[inp]" title="必须输入">
+													<input type="checkbox" name="like[zero]" title="可为0">
+													<input type="checkbox" name="like[edit]" title="禁止编辑">
+												</div>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</form>
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<script src="../../static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/alltasks.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

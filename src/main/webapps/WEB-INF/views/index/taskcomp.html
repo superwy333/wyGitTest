@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>已办任务</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/viewer.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/myadmin.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/boxImg.css"/>
+		
+	</head>
+
+	<body>
+		<div class="wrap-container">
+			<div class="">
+				<div class="alltasks col-lg-9">
+					<div class="data-show">
+						<div class="layui-card layui-tab">
+							<div class="layui-card-header">已办任务</div>
+							<form class="layui-form">
+								<div class="demoTable task_con">
+									<div class="layui-inline">
+										<label class="layui-form-label">单证编号</label>
+										<div class="layui-input-inline">
+											<input type="text" name="edocNo" lay-verify="required|number" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-form-item">
+											<label class="layui-form-label">业务类型</label>
+											<div class="layui-input-inline">
+												<select name="pcall" lay-verify="required" lay-search="">
+													<option value="">全部</option>
+													<option value="1">报账单</option>
+													<option value="2">合同</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<button class="layui-btn" data-type="reload">查询</button>
+									<button class="layui-btn" data-type="reload">高级查询</button>
+								</div>
+							</form>
+							<table class="layui-hide" id="taskcomp" lay-filter="user"></table> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/alltasks.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

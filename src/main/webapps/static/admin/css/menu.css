@@ -1,0 +1,33 @@
+.layui-nav-itemed .layui-nav-child .layui-nav-more{    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid dashed dashed;
+    border-color: #c2c2c2 transparent transparent;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-width: 6px;}
+	
+.layui-nav-itemed .layui-nav-child .layui-nav-itemed .layui-nav-more{
+	
+	top: 14px;
+	border-style: dashed dashed solid;
+    border-color: transparent transparent #c2c2c2;
+}
+
+.layui-nav-itemed .layui-nav-child dd a{padding-left: 25px; }
+
+.main-layout-side .layui-nav li a{background-color: #20222A !important;}
+.main-layout-side .layui-nav li dd a{background: #000 !important;}
+
+.main-layout-side .layui-nav-itemed > a{background-color: #20222A !important;}
+.main-layout-side .layui-nav-itemed .layui-nav-itemed > a{background-color: #000 !important;    border-bottom: 1px solid rgba(255,255,255,0.1);}
+
+.main-layout-header .layui-nav .layui-nav-item a{padding: 0 12px;
+    color: #999;}
+.main-layout-side .layui-nav-tree .layui-nav-child a .l-line{margin-left: 15px;}
+

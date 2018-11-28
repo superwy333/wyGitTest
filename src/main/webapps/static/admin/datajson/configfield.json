@@ -1,0 +1,86 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 1, 
+    "data": [
+        {
+            "config_field_id": "1",
+			"config_field_dname": "a_classification", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "任务分类", 
+            "config_field_ctype": "字符型", 
+            "config_field_cdisplay": "是", 
+            "config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "是", 
+			"config_field_describe": "报账单/合同等等",
+			"config_field_sort": "1"
+        },
+		{
+            "config_field_id": "2",
+			"config_field_dname": "a_business", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "业务单号", 
+            "config_field_ctype": "字符型", 
+			"config_field_cdisplay": "是", 
+			"config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "否", 
+			"config_field_describe": "",
+			"config_field_sort": "2"
+        },
+		{
+            "config_field_id": "3",
+			"config_field_dname": "a_username", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "企业主体", 
+            "config_field_ctype": "字符型", 
+			"config_field_cdisplay": "是", 
+			"config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "否", 
+			"config_field_describe": "",
+			"config_field_sort": "3"
+        },
+		{
+            "config_field_id": "4",
+			"config_field_dname": "a_seque", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "封单状态", 
+            "config_field_ctype": "字符型", 
+            "config_field_cdisplay": "是", 
+            "config_field_value": "", 
+            "config_field_ccondition": "是", 
+            "config_field_chigh": "否",
+			"config_field_describe": "已封单/未封单/已解单",
+			"config_field_sort": "4"
+        },
+		{
+            "config_field_id": "5",
+			"config_field_dname": "a_images", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "影像状态", 
+            "config_field_ctype": "字符型", 
+			"config_field_cdisplay": "是", 
+			"config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "否",
+			"config_field_describe": "已采集/待采集/待重采/待补采",
+			"config_field_sort": "5"
+        },
+		{
+            "config_field_id": "6",
+			"config_field_dname": "a_examine", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "调阅审核", 
+            "config_field_ctype": "字符型", 
+			"config_field_cdisplay": "是", 
+			"config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "否",
+			"config_field_describe": "审核中/审核通过/审核不通过",
+			"config_field_sort": "6"
+        }
+		
+    ]
+}
