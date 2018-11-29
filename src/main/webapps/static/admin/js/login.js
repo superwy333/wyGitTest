@@ -17,14 +17,28 @@ layui.use(['form', 'layedit','layer'], function(){
 	
 	//监听提交
 	form.on('submit(login)', function(data) {
-	$.ajax({
+        $.ajax({
+            url : "http://192.168.11.124:8088/doLogin",
+            type : 'POST',
+            data: data.field,
+            dateType:"json",
+            contentType: 'application/json;charset=UTF-8',
+            success : function(data) {
+            	alert(111);
+
+            }
+		})
+
+
+
+	/*$.ajax({
 		type:'POST',
 		dateType:"json",
-        /*contentType: "text/html;charset=UTF-8",*/
-		/*url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?login",*/
+        /!*contentType: "application/json;charset=UTF-8",*!/
+		/!*url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?login",*!/
         url: "http://192.168.11.124:8088/doLogin",
 		data: data.field,
-        /*beforeSend: function (XMLHttpRequest) {
+        /!*beforeSend: function (XMLHttpRequest) {
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:8088");
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE ,PUT");
             XMLHttpRequest.setRequestHeader("Access-Control-Max-Age", "30");
@@ -33,19 +47,20 @@ layui.use(['form', 'layedit','layer'], function(){
             XMLHttpRequest.setRequestHeader("XDomainRequestAllowed", "1");
             /!*XMLHttpRequest.setRequestHeader("${_csrf.parameterName}", "${_csrf.token}");*!/
             //alert(111);
-        },*/
-		/*crossDomain: true,
+        },*!/
+		crossDomain: true,
 		xhrFields: {
 			withCredentials: true
-		},*/
+		},
 		
 		success:function(data){
 			if(data){
 				
-				$.cookie('userData', data);
+				//$.cookie('userData', data);
+				alert(data.url);
 				
 			}
-			var data = JSON.parse(data);
+			/!*var data = JSON.parse(data);
 					layer.msg(data.msg,{
 					offset:'15px',
 					icon:1,
@@ -56,9 +71,9 @@ layui.use(['form', 'layedit','layer'], function(){
 					setTimeout(function(){
 						location.href='index.html';
 					},1000);
-				}
+				}*!/
 		}
-	});
+	});*/
 	return false;
 	});
 

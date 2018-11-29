@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+		<title>后台登录</title>
+	</head>
+
+	<body>
+	<div class="home_login">
+		<!--    <div class="login-title"><img src="images/title.png"></div> -->
+		<div class="login-div">
+			<form action="/doLogin2" method="post">
+				<input type="hidden" value="sys" name="loginType">
+				<ul class="login-form">
+					<li>
+						<input type="text" id="loginName"  name="loginName" placeholder="请输入用户名"  hidefocus=”true”>
+						<label class="login_img user"></label>
+					</li>
+					<li>
+						<input type="password" id="pwd" name="pwd" placeholder="请输入密码">
+						<label class="login_img pwd"></label>
+					</li>
+					<!--<li class="check">
+						<a href="${ctx}/logout" class="">切换账号登录</a>
+					</li>-->
+					<li class="submit">
+						<input type="submit" value="登录">
+					</li>
+				</ul>
+			</form>
+			<!--div class="error_box" style="color: red;margin-top:10px;">
+				${loginSysError}
+			</div>-->
+		</div>
+		<!-- 登录模块结束 -->
+	</div>
+
+	</body>
+
+</html>

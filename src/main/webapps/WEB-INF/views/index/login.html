@@ -33,24 +33,24 @@
 				<div class="lotit">FSSC-A1 影像发票档案管理系统</div>
 				<div class="m-login-warp">
 					<form class="layui-form" id="form1">
-						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+						<!--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
 						<div class="layui-form-item login-inp">
 							<input type="text" name="loginName"  lay-verify="required|user" placeholder="请输入账号" autocomplete="off" class="layui-input">
 						</div>
 						<div class="layui-form-item login-inp">
 							<input type="password" name="pwd"  lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
 						</div>
-						<div class="layui-form-item login-inp">
+						<!--<div class="layui-form-item login-inp">
 							<div class="layui-inline login-code">
 								<input type="text" name="code"  lay-verify="required|verity" placeholder="请输入验证码" autocomplete="off" class="layui-input">
 							</div>
 							<div class="layui-inline">
 								<a href="javascript:void(0);"><img class="verifyImg" id="captchaImage" onclick="getCaptchaImage();" alt="验证码"/></a>
 							</div>
-						</div>
-						<div class="login-inp"><!--class="layui-input-inline"-->
+						</div>-->
+						<!--<div class="login-inp">&lt;!&ndash;class="layui-input-inline"&ndash;&gt;
 							<select name="modules" lay-verify="required" lay-search="">
-								<option value="">-----企业主体-----</option>
+								<option value="">-&#45;&#45;&#45;&#45;企业主体-&#45;&#45;&#45;&#45;</option>
 								<option value="1">哲骧总公司</option>
 								<option value="2">哲骧上海公司</option>
 								<option value="3">哲骧苏州分公司</option>
@@ -58,7 +58,7 @@
 								<option value="5">哲骧北京分公司</option>
 							 
 							</select>
-						</div>
+						</div>-->
 						
 						
 						<div class="layui-form-item m-login-btn">

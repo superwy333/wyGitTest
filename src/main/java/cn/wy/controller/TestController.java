@@ -44,6 +44,11 @@ public class TestController {
         return "login";
     }
 
+    @RequestMapping("/login2")
+    public String login2() {
+        return "login2";
+    }
+
     @RequestMapping("/error")
     public String error() {
         return "error";
@@ -65,16 +70,29 @@ public class TestController {
         return map;
     }
 
-
     @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> login(String loginName, String pwd) {
+        Map<String,Object> result = new HashMap<String,Object>();
+        /*String userName = (String)map.get("userName");
+        String pwd = (String)map.get("pwd");*/
+        if ("1".equals(loginName)&&"2".equals(pwd)) {
+            result.put("url","index");
+        }else {
+            result.put("url","error");
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/doLogin2", method = RequestMethod.POST)
+    public String login2(String loginName, String pwd) {
         System.out.println("loginName>>>>>>>" + loginName);
         System.out.println("pwd>>>>>>>" + pwd);
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("a","1");
-        map.put("b","2");
-        return map;
+        if ("1".equals(loginName)&&"1".equals(pwd)) {
+            return "index";
+        }else {
+            return "error";
+        }
     }
 
     @RequestMapping(value = "/testPost", method = RequestMethod.POST)
