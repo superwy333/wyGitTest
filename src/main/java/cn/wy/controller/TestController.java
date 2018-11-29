@@ -4,10 +4,7 @@ import cn.wy.domain.SysUser;
 import cn.wy.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
@@ -69,7 +66,7 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/doLogin", method = RequestMethod.GET)
+    @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> login(String loginName, String pwd) {
         System.out.println("loginName>>>>>>>" + loginName);
@@ -78,5 +75,39 @@ public class TestController {
         map.put("a","1");
         map.put("b","2");
         return map;
+    }
+
+    @RequestMapping(value = "/testPost", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> testPost(@RequestBody Map<String,Object> map) {
+        Map<String,Object> result = new HashMap<String,Object>();
+        try {
+            System.out.println((String) map.get("req"));
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>testPost>>>>>>>>>>>>>>>>>");
+            result.put("msg","SUCCESS");
+            result.put("code","200");
+        }catch (Exception e) {
+            result.put("msg","FAIL");
+            result.put("code","404");
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @RequestMapping(value = "/testGet", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> testGet(String req) {
+        Map<String,Object> result = new HashMap<String,Object>();
+        try {
+            System.out.println(req);
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>testGet>>>>>>>>>>>>>>>>>");
+            result.put("msg","SUCCESS");
+            result.put("code","200");
+        }catch (Exception e) {
+            result.put("msg","FAIL");
+            result.put("code","404");
+            e.printStackTrace();
+        }
+        return result;
     }
 }

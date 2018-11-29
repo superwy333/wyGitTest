@@ -18,22 +18,22 @@ layui.use(['form', 'layedit','layer'], function(){
 	//监听提交
 	form.on('submit(login)', function(data) {
 	$.ajax({
-		type:'GET',
+		type:'POST',
 		dateType:"json",
-        contentType: "text/html;charset=UTF-8",
+        /*contentType: "text/html;charset=UTF-8",*/
 		/*url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?login",*/
         url: "http://192.168.11.124:8088/doLogin",
 		data: data.field,
-        beforeSend: function (XMLHttpRequest) {
+        /*beforeSend: function (XMLHttpRequest) {
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:8088");
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE ,PUT");
             XMLHttpRequest.setRequestHeader("Access-Control-Max-Age", "30");
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Headers", "Origin, No-Cache, X-Requested-With, If-Modified-Since,Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With,userId,token,Authorization,deviceId,Access-Control-Allow-Origin,Access-Control-Allow-Headers,Access-Control-Allow-Methods");
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Credentials", "true");
             XMLHttpRequest.setRequestHeader("XDomainRequestAllowed", "1");
-            /*XMLHttpRequest.setRequestHeader("${_csrf.parameterName}", "${_csrf.token}");*/
+            /!*XMLHttpRequest.setRequestHeader("${_csrf.parameterName}", "${_csrf.token}");*!/
             //alert(111);
-        },
+        },*/
 		/*crossDomain: true,
 		xhrFields: {
 			withCredentials: true
