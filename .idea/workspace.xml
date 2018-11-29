@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88a92cf5-888a-4e8a-b70d-3e235cc552da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/wy/controller/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/wy/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springConfig/spring-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/springConfig/spring-security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapps/static/admin/js/login.js" afterPath="$PROJECT_DIR$/src/main/webapps/static/admin/js/login.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +53,8 @@
       <file leaf-file-name="spring-security.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/springConfig/spring-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            <state relative-caret-position="408">
+              <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -616,8 +613,16 @@
       <workItem from="1543284661157" duration="2444000" />
       <workItem from="1543373159623" duration="725000" />
       <workItem from="1543389859065" duration="7400000" />
-      <workItem from="1543454337677" duration="1772000" />
+      <workItem from="1543454337677" duration="1828000" />
     </task>
+    <task id="LOCAL-00001" summary="springSecurity测试">
+      <created>1543461337336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543461337336</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -653,7 +658,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90117000" />
+    <option name="totallyTimeSpent" value="90173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -697,6 +702,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="springSecurity测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="springSecurity测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1067,8 +1076,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springConfig/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="408">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
       </provider>
