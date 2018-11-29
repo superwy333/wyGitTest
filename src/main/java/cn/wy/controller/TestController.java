@@ -70,13 +70,14 @@ public class TestController {
         return map;
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> login(String loginName, String pwd) {
+    public Map<String,Object> login(@RequestBody Map<String,Object> map) {
         Map<String,Object> result = new HashMap<String,Object>();
-        /*String userName = (String)map.get("userName");
-        String pwd = (String)map.get("pwd");*/
-        if ("1".equals(loginName)&&"2".equals(pwd)) {
+        String loginName = (String)map.get("loginName");
+        String pwd = (String)map.get("pwd");
+        if ("1".equals(loginName)&&"1".equals(pwd)) {
             result.put("url","index");
         }else {
             result.put("url","error");

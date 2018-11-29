@@ -20,12 +20,14 @@ layui.use(['form', 'layedit','layer'], function(){
         $.ajax({
             url : "http://192.168.11.124:8088/doLogin",
             type : 'POST',
-            data: data.field,
+            data: JSON.stringify(data.field),
             dateType:"json",
             contentType: 'application/json;charset=UTF-8',
+            /*beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:8088");
+            },*/
             success : function(data) {
-            	alert(111);
-
+                window.location.href = data.url;
             }
 		})
 
