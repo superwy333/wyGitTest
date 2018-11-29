@@ -69,7 +69,7 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/doLogin", method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> login(String loginName, String pwd) {
         System.out.println("loginName>>>>>>>" + loginName);

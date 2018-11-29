@@ -18,11 +18,11 @@ layui.use(['form', 'layedit','layer'], function(){
 	//监听提交
 	form.on('submit(login)', function(data) {
 	$.ajax({
-		type:'POST',
+		type:'GET',
 		dateType:"json",
         contentType: "text/html;charset=UTF-8",
 		/*url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?login",*/
-        url: "http://192.168.11.124:8088/login",
+        url: "http://192.168.11.124:8088/doLogin",
 		data: data.field,
         beforeSend: function (XMLHttpRequest) {
             XMLHttpRequest.setRequestHeader("Access-Control-Allow-Origin", "http://localhost:8088");
