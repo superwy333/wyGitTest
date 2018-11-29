@@ -2,6 +2,8 @@ package cn.wy.controller;
 
 import cn.wy.domain.SysUser;
 import cn.wy.service.SysUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,8 @@ import java.util.Map;
  **/
 @Controller
 public class TestController {
+
+    private final static Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
     private SysUserService sysUserService;
@@ -57,6 +61,7 @@ public class TestController {
     @RequestMapping("/getAllSysUser")
     @ResponseBody
     public List<SysUser> getAllSysUser() {
+        LOGGER.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>getAllSysUser>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         List<SysUser> sysUserList = sysUserService.queryAll();
         return sysUserList;
     }
