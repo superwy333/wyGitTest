@@ -120,7 +120,7 @@
 
 
 
-    <context:component-scan base-package="cn.wy.controller" />
+    <context:component-scan base-package="cn.wy.controller,cn.wy.jsonAdaptor" />
 
     <!--JSP视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
