@@ -192,6 +192,15 @@
             <version>2.8.5</version>
         </dependency>
 
+        <!--redis集成框架：jedis-->
+        <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+
 
 
 

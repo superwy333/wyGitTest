@@ -137,7 +137,7 @@
     <!--HTML视图解析器-->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath">
-            <value>/WEB-INF/views/index/cssTestHtml</value>
+            <value>/WEB-INF/views/index</value>
         </property>
         <property name="freemarkerSettings">
             <props>

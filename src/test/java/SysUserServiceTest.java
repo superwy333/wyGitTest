@@ -34,5 +34,11 @@ public class SysUserServiceTest {
 
     }
 
+    @Test
+    public void test2() {
+        SysUser sysUser = sysUserService.getUserById(1);
+        System.out.println(sysUser);
+    }
+
 
 }

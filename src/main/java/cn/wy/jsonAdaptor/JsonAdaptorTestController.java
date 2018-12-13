@@ -62,7 +62,7 @@ public class JsonAdaptorTestController {
             resp.setMsg("testEntity() execute failed");
             resp.setSuccess(false);
         }
-        resp = null;
+        //resp = null;
         LOGGER.info(">>>>>>>>>>>>>>>>>>>>>GSON.toJson(resp)<<<<<<<<<<<<<<<<<<<:{}",GSON.toJson(resp));
         return GSON.toJson(resp);
     }
