@@ -1,4 +1,5 @@
 import cn.wy.domain.SysUser;
+import cn.wy.redis.RedisDao;
 import cn.wy.service.SysUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,9 @@ public class SysUserServiceTest {
     @Autowired
     private SysUserService sysUserService;
 
+    @Autowired
+    private RedisDao redisDao;
+
 
     @Test
     public void test() {
@@ -38,6 +42,18 @@ public class SysUserServiceTest {
     public void test2() {
         SysUser sysUser = sysUserService.getUserById(1);
         System.out.println(sysUser);
+    }
+
+    @Test
+    public void test3() {
+        try {
+            String replyCode = redisDao.set("aaa","111");
+            String s = redisDao.get("aaa");
+            System.out.println(s);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 

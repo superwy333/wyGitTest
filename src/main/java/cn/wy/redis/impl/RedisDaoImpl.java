@@ -17,7 +17,7 @@ public class RedisDaoImpl implements RedisDao {
     private JedisPool jedisPool;
 
     public String get(String key) {
-        return null;
+        return jedisPool.getResource().get(key);
     }
 
     public String set(String key, String value) {
