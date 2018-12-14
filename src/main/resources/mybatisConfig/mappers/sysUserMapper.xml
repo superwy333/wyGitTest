@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.wy.mapper.SysUserMapper">
+    <cache eviction="LRU" size="1024" readOnly="false" flushInterval="60000" type="cn.wy.redis.cache.RedisCache3"></cache>
 
     <resultMap id="BaseResultMap" type="cn.wy.domain.SysUser" >
         <id column="id" property="id" jdbcType="TINYINT"/>
