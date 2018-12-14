@@ -6,6 +6,7 @@ import org.apache.ibatis.cache.Cache;
 import redis.clients.jedis.Jedis;
 
 import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @description:
@@ -39,7 +40,6 @@ public class RedisCache3 implements Cache {
         }catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -54,21 +54,31 @@ public class RedisCache3 implements Cache {
 
     @Override
     public Object removeObject(Object o) {
-        return null;
+        Object o1 = getObject(o);
+        try {
+            jedis.del(GSON.toJson(o));
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return o1;
     }
 
     @Override
     public void clear() {
-
+        try {
+            jedis.flushDB();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return Integer.parseInt(Long.toString(jedis.dbSize()));
     }
 
     @Override
     public ReadWriteLock getReadWriteLock() {
-        return null;
+        return new ReentrantReadWriteLock();
     }
 }
