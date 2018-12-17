@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import org.apache.ibatis.cache.Cache;
 import redis.clients.jedis.Jedis;
 
+import java.util.List;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
