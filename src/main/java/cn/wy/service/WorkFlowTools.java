@@ -15,15 +15,15 @@ public class WorkFlowTools {
         // 找到任务的workflow
         // 找到第一个action
         // 新增action_execute记录
+    }
+
+    // 走到下一个action
+    public static void go() {
 
     }
 
+    // 跳转到指定节点
+    public static void jump() {
 
-
-
-
-
-
-
-
+    }
 }
