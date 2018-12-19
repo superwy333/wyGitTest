@@ -1,0 +1,20 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 1, 
+    "data": [
+        {
+            "config_field_id": "1",
+			"config_field_dname": "b_username", 
+            "config_field_dtype": "string", 
+            "config_field_cname": "影像类型", 
+            "config_field_ctype": "字符型", 
+            "config_field_cdisplay": "是", 
+            "config_field_value": "", 
+			"config_field_ccondition": "是", 
+			"config_field_chigh": "是", 
+			"config_field_describe": "图片/pdf等",
+			"config_field_sort": "1"
+        }
+    ]
+}

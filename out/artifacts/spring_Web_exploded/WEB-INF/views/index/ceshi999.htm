@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>ceshi</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+        function login() {
+			console.log('login');
+            $.ajax({
+            //几个参数需要注意一下
+                type: "post",//方法类型
+				crossDomain: true,
+				xhrFields: {
+				  withCredentials: true
+				},
+                dataType: "json",//预期服务器返回的数据类型
+                url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?login" ,//url
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+		
+		function logout() {
+			console.log('logout');
+            $.ajax({
+            //几个参数需要注意一下
+                type: "post",//方法类型
+				crossDomain: true,
+				xhrFields: {
+				  withCredentials: true
+				},
+                dataType: "json",//预期服务器返回的数据类型
+                url: "http://192.168.11.220:8080/zs-main/web/sysUserController.do?logout" ,//url
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<form action="" method="post" id="form1">
+  <div>
+    <label for="loginName">Name:</label>
+    <input type="text" id="loginName" name="loginName">
+  </div>
+  <div>
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd">
+  </div>
+<input type="button" onclick ="login();" value="login"/>
+<input type="button" onclick ="logout();" value="loout"/>
+</form>
+</body>
+</html>

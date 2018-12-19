@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>所有影像任务</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/viewer.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/myadmin.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/boxImg.css"/>
+		<style>
+		.layui-tab-content{ padding:0 10px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap-container">
+			<div class="">
+				<div class="alltasks col-lg-9">
+					<div class="data-show">
+						<div class="layui-tab layui-tab-card ">
+							<div class="layui-card-header" style="margin-bottom:10px;">增值税抵账库</div>
+							<form class="layui-form">
+								<div class="demoTable task_con">
+									<div class="layui-inline">
+										<label class="layui-form-label">业务单号</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">发票日期范围</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_mentiont" id="a_mentiont" lay-verify="date" placeholder="-" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">认证状态</label>
+										  <div class="layui-input-inline">
+											<select name="a_seque" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">已认证</option>
+											  <option value="2">未认证</option>
+											  <option value="3">认证中</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">认证结果</label>
+										  <div class="layui-input-inline">
+											<select name="a_seque" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">成功</option>
+											  <option value="2">无此票</option>
+											  <option value="3">该票已认证</option>
+											  <option value="4">该票异常无法认证</option>
+											  <option value="5">该票已红冲</option>
+											  <option value="6">未到申报期</option>
+											  <option value="7">逾期无法认证</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">抵账库认证</label>
+										  <div class="layui-input-inline">
+											<select name="a_seque" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">XXXXXX</option>
+											  <option value="2">XXXXXX</option>
+											  <option value="3">XXXXXX</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">抵账库匹配</label>
+										  <div class="layui-input-inline">
+											<select name="a_seque" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">XXXXXX</option>
+											  <option value="2">XXXXXX</option>
+											  <option value="3">XXXXXX</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">业务类型</label>
+										  <div class="layui-input-inline">
+											<select name="a_classification" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">报账单业务</option>
+											  <option value="2">合同业务</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<div class="layui-form-item">
+										  <label class="layui-form-label">文件类型</label>
+										  <div class="layui-input-inline">
+											<select name="a_seque" lay-verify="required" lay-search="">
+											  <option value=""></option>
+											  <option value="1">机动车销售统一发票</option>
+											  <option value="2">附件</option>
+											  <option value="3">报账单封面</option>
+											  <option value="4">增值税电子普通发票</option>
+											  <option value="5">增值税专用发票</option>
+											</select>
+										  </div>
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">发票代码</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">发票号码</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">购方名称</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">购方税号</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">销方名称</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">销方税号</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">金额（未税）</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">税额</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">价税合计</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+									<div class="layui-inline imgshow_hide">
+										<label class="layui-form-label">备注</label>
+										<div class="layui-input-inline">
+											<input type="text" name="a_classification" lay-verify="required|number" id="demoReload" autocomplete="off" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">筛选条件</label>
+									<div class="layui-input-block">
+										<input type="checkbox" name="like[authen]" title="可认证发票">
+										<input type="checkbox" name="like[deduct]" title="可抵扣发票">
+									</div>
+								</div>
+								</form>
+								<button class="layui-btn img_search1" id="imgshow_hide">高级查询</button>
+								<button class="layui-btn img_search2" data-type="reload">查询</button>
+								<button class="layui-btn img_search2" data-type="reload">重置</button>
+								<div class="clear"></div>
+						
+							<div class="layui-tab-content" style="min-height: 100px;">
+								<div class="layui-card">
+									<script type="text/html" id="tool_detailed_task">
+										<div class="layui-btn-container">
+											<button class="layui-btn layui-btn-sm" lay-event="look">认证</button>
+											<button class="layui-btn layui-btn-sm" lay-event="look">人工处理</button>
+										</div>
+									</script>
+									<table class="layui-hide" id="detailed_task" lay-filter="detailed_task"></table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/alltasks.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/html" id="detailed_task_eject">
+			<div class="layui-tab layui-tab-card eject" lay-filter="tab1">
+			   <ul class="layui-tab-title">
+				<li class="layui-this">发票详情</li>
+				<li>发票影像</li>
+			   </ul>
+			   <div class="layui-tab-content" style="min-height: 100px;">
+				<div class="layui-tab-item  layui-show">
+				 <form class="layui-form">
+				  <div class="layui-card-header">
+				   发票
+				  </div>
+				  <table class="layui-table detail_invoice">
+				   <colgroup>
+					<col width="50" />
+					<col width="140" />
+					<col width="320" />
+					<col width="50" />
+					<col width="140" />
+					<col width="320" />
+				   </colgroup>
+				   <tbody>
+					<tr>
+					 <th colspan="2">发票代码：</th>
+					 <td>1100162130</td>
+					 <th colspan="2">发票号码：</th>
+					 <td>03387121</td>
+					</tr>
+					<tr>
+					 <th colspan="2">发票类型：</th>
+					 <td>增值税普通发票</td>
+					 <th colspan="2">发票日期：</th>
+					 <td>2017-05-05</td>
+					</tr>
+					<tr>
+					 <th colspan="2">金额（不含税）：</th>
+					 <td>5582.83</td>
+					 <th colspan="2">税额：</th>
+					 <td>334.97</td>
+					</tr>
+					<tr>
+					 <th colspan="2">价税合计：</th>
+					 <td>5917.80</td>
+					 <th colspan="2">校验码（后六位）：</th>
+					 <td>038721</td>
+					</tr>
+					<tr>
+					 <th rowspan="4">购<br />货<br />单<br />位</th>
+					 <th>名称：</th>
+					 <td>北京奇付通科技有限公司</td>
+					 <th rowspan="4">销<br />货<br />单<br />位</th>
+					 <th>名称：</th>
+					 <td>北京奇付通科技有限公司</td>
+					</tr>
+					<tr>
+					 <th>纳税人识别号：</th>
+					 <td>91110000590667306X</td>
+					 <th>纳税人识别号：</th>
+					 <td>91110000590667306X</td>
+					</tr>
+					<tr>
+					 <th>地址、电话：</th>
+					 <td></td>
+					 <th>地址、电话：</th>
+					 <td></td>
+					</tr>
+					<tr>
+					 <th>开户行及账号：</th>
+					 <td></td>
+					 <th>开户行及账号：</th>
+					 <td></td>
+					</tr>
+					<tr>
+					 <th colspan="2">备注：</th>
+					 <td colspan="4">红豆沙就会打开手机啊</td>
+					</tr>
+				   </tbody>
+				  </table>
+				  <div class="layui-card-header">
+				   明细
+				  </div>
+				  <table class="layui-table detail_invoice2">
+				   <tbody>
+					<tr>
+					 <th>商品名称</th>
+					 <th>规格型号</th>
+					 <th>计量单位</th>
+					 <th>数量</th>
+					 <th>单价</th>
+					 <th>税率</th>
+					 <th>金额</th>
+					 <th>税额</th>
+					</tr>
+					<tr>
+					 <td>化学药品XXXXX</td>
+					 <td>5ml；5mg</td>
+					 <td>瓶</td>
+					 <td>2</td>
+					 <td>31.035</td>
+					 <td>0.16</td>
+					 <td>62.07</td>
+					 <td>9.93</td>
+					</tr>
+				   </tbody>
+				  </table>
+				  <div class="layui-card-header">
+				   状态
+				  </div>
+				  <table class="layui-table detail_invoice2">
+				   <tbody>
+					<tr>
+					 <th>认证状态</th>
+					 <th>认证结果</th>
+					 <th>认证摘要</th>
+					 <th>认证日期</th>
+					 <th>抵账库认证结果</th>
+					 <th>抵账库匹配</th>
+					 <th>认证所属期</th>
+					</tr>
+					<tr>
+					 <td>未认证</td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					 <td></td>
+					</tr>
+				   </tbody>
+				  </table>
+				 </form>
+				</div>
+				<div class="layui-tab-item detail_image">
+				 <img src="../../static/admin/images/2.jpg" />
+				</div>
+			   </div>
+			  </div>
+		</script>
+	</body>
+
+</html>

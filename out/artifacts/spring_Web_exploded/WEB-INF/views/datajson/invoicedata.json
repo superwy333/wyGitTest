@@ -1,0 +1,34 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 1, 
+    "data": [
+        {
+			"edocNo": "DD2018082000077", 
+            "bizTypeCode": "报账单业务", 
+            "billTypeCode": "机动车销售统一发票", 
+            "invCode": "1100162130", 
+            "invNo": "03387121", 
+            "invDate": "2017-05-05", 
+            "checkcode": "038721", 
+			
+			"truestate": "已验真", 
+            "trueresuits": "存疑", 
+            "truesummary": "发票影像模糊", 
+            "authstate": "未认证",
+			"authresuits": "", 
+            "authsummary": "", 
+            "bankauth": "", 
+            "bankmatch": "",
+			
+            "buyerName": "北京奇付通科技有限公司", 
+            "buyerTaxCode": "91110000590667306X", 
+            "salerName": "北京卡福尔科技有限公司", 
+            "salerTaxCode": "91110112567455954A", 
+            "invAmount": "5582.83",
+			"invTax": "334.97", 
+			"invTotal": "5917.80",
+            "remarks": "红豆沙就会打开手机啊"
+        }
+    ]
+}

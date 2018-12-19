@@ -1,0 +1,43 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 3, 
+    "data": [
+        {
+            "dt_invCode": 1200181130, 
+            "dt_invNo": "09714388", 
+            "dt_invDate": "2018-08-24", 
+            "dt_invAmount": "381660.8", 
+            "dt_checkcode": 412892, 
+            "dt_validate": "真票", 
+            "dt_ierror": "", 
+            "dt_time": "2018-08-31",
+			"dt_name": "张三", 
+            "dt_arti": "未处理"
+        },
+		{
+            "dt_invCode": 1200181130, 
+            "dt_invNo": "09714388", 
+            "dt_invDate": "2018-08-24", 
+            "dt_invAmount": "381660.8", 
+            "dt_checkcode": 412892, 
+            "dt_validate": "真票", 
+            "dt_ierror": "", 
+            "dt_time": "2018-08-31",
+			"dt_name": "张三", 
+            "dt_arti": "未处理"
+        },
+		{
+            "dt_invCode": 1200181130, 
+            "dt_invNo": "09714388", 
+            "dt_invDate": "2018-08-24", 
+            "dt_invAmount": "381660.8", 
+            "dt_checkcode": 412892, 
+            "dt_validate": "真票", 
+            "dt_ierror": "", 
+            "dt_time": "2018-08-31",
+			"dt_name": "张三", 
+            "dt_arti": "未处理"
+        }
+    ]
+}

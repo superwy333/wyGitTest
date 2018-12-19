@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>文件种类配置</title>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/myadmin.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/boxImg.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/admin/css/configejct.css"/>
+	</head>
+
+	<body>
+		<div class="wrap-container">
+			<div class="">
+				<div class="alltasks col-lg-9">
+					<div class="data-show">
+						<div class="layui-tab layui-tab-card" lay-filter="tab1">
+							<ul class="layui-tab-title">
+								<li class="layui-this" lay-id="1">影像文件种类配置</li>
+								<li lay-id="2">影像数据字段配置</li>
+							</ul>
+							<div class="layui-tab-content" style="min-height: 100px;">
+								<div class="layui-tab-item  layui-show">
+									<table class="layui-hide" id="config_image_file" lay-filter="config_image_file"></table>
+								</div>
+								<script type="text/html" id="b_config_image">
+									<div class="layui-btn-container">
+										<button class="layui-btn layui-btn-sm" lay-event="add">添加</button>
+										<button class="layui-btn layui-btn-sm" lay-event="del">删除</button>
+										<button class="layui-btn layui-btn-sm" lay-event="submit">字段配置提交</button>
+										<button class="layui-btn layui-btn-sm" lay-event="att_submit">字段属性配置</button>
+										<button class="layui-btn layui-btn-sm" lay-event="outexcel">导出excel</button>
+										<button class="layui-btn layui-btn-sm" lay-event="inexcel">导入excel</button>
+									</div>
+								</script>
+								<script type="text/html" id="config_opera">
+                                    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="config_img_field">字段配置</a>
+                                </script>
+								<div class="layui-tab-item eject">
+									<form class="layui-form" method="post">
+										<div class="config_left">
+											<div class="layui-form xtree-main">
+												<div id="xtree1" class="xtree_contianer"></div>
+											</div>
+										</div>
+										<div class="config_right">
+											<div class="layui-inline">
+												<label class="layui-form-label">数据类型</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">输入顺序</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">默认值</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">正则表达式</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-inline">
+												<label class="layui-form-label">备注</label>
+												<div class="layui-input-inline">
+													<input type="text" name="a_classification" lay-verify="required|number" autocomplete="off" class="layui-input">
+												</div>
+											</div>
+											<div class="layui-form-item config_right_check">
+												<label class="layui-form-label">勾选选框</label>
+												<div class="layui-input-block field_check">
+													<input type="checkbox" name="like[inp]" title="必须输入">
+													<input type="checkbox" name="like[zero]" title="可为0">
+													<input type="checkbox" name="like[edit]" title="禁止编辑">
+												</div>
+											</div>
+										</div>
+										<div class="clear"></div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/alltasks.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/admin/js/layui-xtree.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var json = [
+                {
+                    title: "表头数据", value: "jd1", data: [
+                      { title: "业务类型", checked: true, disabled: true, value: "jd1.1", data: [] }
+                    , { title: "业务单号", value: "jd1.2", checked: true, disabled: true, data: [] }
+                    , { title: "企业主体", value: "jd1.3", checked: true, disabled: true, data: [] }
+                    , { title: "封单状态", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "影像状态", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "调阅审核", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "任务创建方式", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "影像采集来源", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "提单人编号", value: "jd1.4", checked: true, disabled: true, data: [] }
+                    , { title: "提单人", value: "jd1.4", data: [] }
+                    , { title: "提单时间", value: "jd1.4", data: [] }
+                    , { title: "任务状态", value: "jd1.4", data: [] }
+                    , { title: "自定义", value: "jd1.4", data: [] }
+                    , { title: "自定义", value: "jd1.4", data: [] }
+                    , { title: "自定义", value: "jd1.4", data: [] }
+                    , { title: "自定义", value: "jd1.4", data: [] }
+                    , { title: "自定义", value: "jd1.4", data: [] }
+                    ]
+                }
+                , {
+                    title: "表身数据", value: "jd2", checked: true, disabled: true, data: [
+                      { title: "序号", value: "jd2.1", checked: true, disabled: true, data: [] }
+                    , { title: "影像类型", value: "jd2.2", checked: true, disabled: true, data: [] }
+                    , { title: "影像格式", value: "jd2.3", checked: true, disabled: true, data: [] }
+                    , { title: "采集方式", value: "jd2.4", checked: true, disabled: true, data: [] }
+                    , { title: "采集编号", value: "jd2.4", checked: true, disabled: true, data: [] }
+                    , { title: "采集人", value: "jd2.4", checked: true, disabled: true, data: [] }
+                    , { title: "采集时间", value: "jd2.4", checked: true, disabled: true, data: [] }
+                    , { title: "自定义", value: "jd2.4", data: [] }
+                    , { title: "自定义", value: "jd2.4", data: [] }
+                    , { title: "自定义", value: "jd2.4", data: [] }
+                    , { title: "自定义", value: "jd2.4", data: [] }
+                    ]
+                }
+        ];
+        //layui 的 form 模块是必须的
+        layui.use(['form'], function () {
+            var form = layui.form;
+
+            //1、最基础的用法 - 直接绑定json
+            var xtree1 = new layuiXtree({
+                elem: 'xtree1'   //(必填) 放置xtree的容器，样式参照 .xtree_contianer
+                , form: form     //(必填) layui 的 from
+                , data: json     //(必填) json数据
+            });
+        });
+		</script>
+	</body>
+
+</html>

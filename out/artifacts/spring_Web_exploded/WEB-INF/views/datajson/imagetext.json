@@ -1,0 +1,43 @@
+{
+    "code": 0, 
+    "msg": "", 
+    "count": 3, 
+    "data": [
+        {
+            "invItemGrid_id": 1, 
+            "invItemGrid_itemName": "", 
+            "jqgh_invItemGrid_itemSpec": "合同验收付款", 
+            "jqgh_invItemGrid_unit": "上海车智广告有限公司", 
+            "jqgh_invItemGrid_itemQuantity": 1, 
+            "jqgh_invItemGrid_itemPrice": "75000", 
+            "jqgh_invItemGrid_itemAmount": "75000", 
+            "jqgh_invItemGrid_itemTaxRate": "",
+			"jqgh_invItemGrid_itemTax": "", 
+            "jqgh_invItemGrid_undefined": ""
+        },
+        {
+            "invItemGrid_id": 2, 
+            "invItemGrid_itemName": "信息服务费", 
+            "jqgh_invItemGrid_itemSpec": "", 
+            "jqgh_invItemGrid_unit": "北京奇付通科技有限公司", 
+            "jqgh_invItemGrid_itemQuantity": 1, 
+            "jqgh_invItemGrid_itemPrice": "5582.83", 
+            "jqgh_invItemGrid_itemAmount": "5582.83", 
+            "jqgh_invItemGrid_itemTaxRate": "6%",
+			"jqgh_invItemGrid_itemTax": "334.97", 
+            "jqgh_invItemGrid_undefined": ""
+        },
+        {
+            "invItemGrid_id": 3, 
+            "invItemGrid_itemName": "信息服务费", 
+            "jqgh_invItemGrid_itemSpec": "", 
+            "jqgh_invItemGrid_unit": "北京奇付通科技有限公司", 
+            "jqgh_invItemGrid_itemQuantity": 1, 
+            "jqgh_invItemGrid_itemPrice": "1957.22", 
+            "jqgh_invItemGrid_itemAmount": "1957.22", 
+            "jqgh_invItemGrid_itemTaxRate": "6%",
+			"jqgh_invItemGrid_itemTax": "117.43", 
+            "jqgh_invItemGrid_undefined": ""
+        }
+    ]
+}

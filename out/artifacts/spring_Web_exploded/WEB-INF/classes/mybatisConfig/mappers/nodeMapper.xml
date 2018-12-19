@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.wy.mapper.NodeMapper">
+    <cache eviction="LRU" size="1024" readOnly="false" flushInterval="60000" type="cn.wy.redis.cache.RedisCache3"></cache>
+
+    <resultMap id="BaseResultMap" type="cn.wy.domain.Node" >
+        <id column="id" property="id" jdbcType="TINYINT"/>
+        <id column="node_name" property="nodeName" jdbcType="VARCHAR"/>
+        <id column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <id column="creator" property="creator" jdbcType="VARCHAR"/>
+        <id column="deleted" property="deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <select id="queryAll" resultMap="BaseResultMap">
+        select * from node
+    </select>
+
+
+</mapper>

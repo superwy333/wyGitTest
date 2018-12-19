@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties resource="config/generatorConfig.properties"/>
+	<classPathEntry location="${classPath}" />
+
+	<context id="Mysql2Tables" targetRuntime="MyBatis3">
+
+		<!-- 这里引入通用Mapper3插件 -->
+    	<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="cn.wy.mapper.BaseMapper"/>
+            <property name="caseSensitive" value="false"/> <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+        </plugin>
+	
+		<!--过滤掉注释-->
+		<commentGenerator>
+      		<property name="suppressAllComments" value="true" />
+      		<property name="suppressDate" value="true" />
+    	</commentGenerator>
+
+		<!-- 数据链接 -->
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionURL}" 
+			userId="${userId}"
+			password="${password}">
+		</jdbcConnection>
+
+		<!-- 根据数据库字段长度自动匹配，默认为false：bigdecimal,long,int,short ,为true时始终使用bigdecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		
+		<!-- Entity类的生成 -->
+		<javaModelGenerator targetPackage="${modelPackage}" targetProject="${path}">
+			<property name="enableSubPackages" value="false" /> <!-- 是否允许在targetPackage目录下建子目录 -->
+			<property name="trimStrings" value="true" />
+			<property name="rootClass" value="cn.wy.domain.BaseDomain"/>
+		</javaModelGenerator>
+
+		<!-- Mapper文件生成 -->
+		<sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${path}">
+			<property name="enableSubPackages" value="false" /> <!-- 是否允许在targetPackage目录下建子目录 -->
+		</sqlMapGenerator>
+
+		<!-- DAO生成 --><!-- 是否允许在targetPackage目录下建子目录 -->
+		<javaClientGenerator type="XMLMAPPER" targetPackage="${daoMapperPackage}" targetProject="${path}">
+			<property name="enableSubPackages" value="false" /> 
+			<property name="trimStrings" value="true" />
+		</javaClientGenerator>
+
+
+
+		<table schema="test" tableName="workflow" domainObjectName="WorkFlow"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table schema="test" tableName="node" domainObjectName="Node"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table schema="test" tableName="action" domainObjectName="Action"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table schema="test" tableName="task" domainObjectName="Task"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table schema="test" tableName="action_execute" domainObjectName="ActionExecute"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+
+
+
+
+
+
+		<!-- 对应的数据库的哪张表,多个表的话就写多个table
+		<table schema="" tableName="${tableName}" domainObjectName="${domainName}"
+			enableCountByExample="true" enableUpdateByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			selectByExampleQueryId="true">
+			<columnOverride column="id" javaType="Long" />
+		</table>
+		 -->
+         
+
+
+		<!--<table schema="platform-product-edoc" tableName="express_rec" domainObjectName="ExpressRec"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="express_type" domainObjectName="ExpressType"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="express_batch" domainObjectName="ExpressBatch"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+		<table tableName="express_detail" domainObjectName="ExpressDetail"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="express_user" domainObjectName="ExpressUser"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>-->
+	</context>
+</generatorConfiguration>

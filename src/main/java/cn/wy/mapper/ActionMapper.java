@@ -11,7 +11,7 @@ import java.util.List;
  * @author: Wy
  * @create: 2018-11-07 11:16
  **/
-@Repository(value = "actionMapper")
+@Repository()
 public interface ActionMapper {
 
     List<Action> queryAll();

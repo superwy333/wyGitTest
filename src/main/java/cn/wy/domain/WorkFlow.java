@@ -1,11 +1,22 @@
 package cn.wy.domain;
 
-import cn.wy.jsonAdaptor.testEntity.BaseEntity;
+import javax.persistence.Column;
 
-/**
- * @description:
- * @author: Wy
- * @create: 2018-12-17 16:20
- **/
-public class WorkFlow extends BaseEntity {
+public class WorkFlow extends BaseDomain {
+    @Column(name = "workflow_name")
+    private String workflowName;
+
+    /**
+     * @return workflow_name
+     */
+    public String getWorkflowName() {
+        return workflowName;
+    }
+
+    /**
+     * @param workflowName
+     */
+    public void setWorkflowName(String workflowName) {
+        this.workflowName = workflowName == null ? null : workflowName.trim();
+    }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+
+        <!-- 指定日志实现 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" /> <!-- log4j -->
+        <!--<setting name="logImpl" value="SLF4J"/>                    &lt;!&ndash; SLF4J &ndash;&gt;-->
+
+        <setting name="cacheEnabled" value="true" />
+        <setting name="lazyLoadingEnabled" value="false" />
+        <setting name="multipleResultSetsEnabled" value="true" />
+        <setting name="useColumnLabel" value="true" />
+        <setting name="useGeneratedKeys" value="false" />
+        <setting name="autoMappingBehavior" value="PARTIAL" />
+        <setting name="defaultExecutorType" value="SIMPLE" /><!-- SIMPLE REUSE BATCH -->
+        <!-- <setting name="defaultExecutorType" value="BATCH" /> -->
+        <setting name="defaultStatementTimeout" value="25000" />
+        <setting name="safeRowBoundsEnabled" value="false" />
+        <setting name="mapUnderscoreToCamelCase" value="false" />
+        <setting name="localCacheScope" value="SESSION" />
+        <!-- <setting name="jdbcTypeForNull" value="OTHER" /> -->
+        <setting name="jdbcTypeForNull" value="NULL" />
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString" />
+        <!-- 这个配置项是Mybatis 3.2才有的,用于显示日志.-->
+        <setting name="logPrefix" value="sqlLog." />
+    </settings>
+
+
+
+</configuration>
